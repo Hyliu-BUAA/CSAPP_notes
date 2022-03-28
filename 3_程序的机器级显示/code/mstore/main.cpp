@@ -1,17 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: sch
+ * @Date: 2022-01-19 20:23:28
+ * @LastEditors: sch
+ * @LastEditTime: 2022-03-28 09:52:04
+ */
+#include <iostream>
+#include <stdlib.h
 
-long mult2(long, long);
-void multstore(long, long, long *);
+void multipy(long&, long&, long&);
 
-int main(){
-	long d;
-	multstore(2, 3, &d);
-	printf("2 * 3 --> %ld\n", d);
-	return 0;
-}
 
-long mult2(long a, long b){
-	long s = a * b;
-	return s;
+int main(int argc, char **argv) {
+	int value1 = std::atoi(argv[1]);
+	int value2 = std::atoi(argv[2]);
+	int result = multipy(value1, value2);
+	std::cout << result << std::endl;
+	return EXIT_SUCCESS;
 }
